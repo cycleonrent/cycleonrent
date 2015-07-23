@@ -75,13 +75,36 @@ h1.logo a{color: #333;}
 /*about*/
 
 /*gallery*/
-.gallery .product{position: relative;margin-bottom: 30px;}
-.gallery .product .overlay{opacity: 0;position: absolute;top: 0;right: 0;bottom: 0;left: 0;background:rgba(255,255,255,0.9);cursor: pointer;
--webkit-transition: all 0.3s ease-in-out;
--moz-transition: all 0.3s ease-in-out;
--ms-transition: all 0.3s ease-in-out;
--o-transition: all 0.3s ease-in-out;
-transition: all 0.3s ease-in-out;}
+.gallery .product{
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.gallery .product .underlay{
+	z-index:-1;
+	position: absolute;
+	top: 0;right: 0;
+	bottom: 0;
+	left: 0;
+	margin : 10%;
+	background:#fff;
+	cursor: pointer;
+}
+
+.gallery .product .overlay{
+	opacity: 0;
+	position: absolute;
+	top: 0;right: 0;
+	bottom: 0;
+	left: 0;
+	background:rgba(255,255,255,0.9);
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
 .gallery .product:hover .overlay{opacity: 1; }
 .gallery .product h3{color: #333;margin-bottom: 0.5em;}
 .gallery .product p{color: #666;font-weight: bold;}
